@@ -86,7 +86,13 @@
 
 
 .page-section-home-articles {
-  padding: $spacing-unit * 3 0 0 0;
+
+  padding: $spacing-unit * 2 0 0 0;
+
+  @include screen-medium {
+    padding-top: $spacing-unit * 3;
+
+  }
 
   .header-secondary {
     margin-bottom: $spacing-unit;

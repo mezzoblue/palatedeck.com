@@ -194,7 +194,7 @@
 
     padding: 0.25rem 1rem 0.25rem 2rem;
 
-    font-family: georgia, serif; // Georgia is just better at this font size
+    font-family: $base-font-family;
     font-size: 0.5 * $base-font-size;
     letter-spacing: 0.1rem;
     line-height: 2rem;
