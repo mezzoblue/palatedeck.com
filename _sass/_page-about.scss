@@ -35,8 +35,8 @@
 
   @include screen-xsmall {
     h1, p {
-      padding-left: $spacing-unit;
-      padding-right: $spacing-unit;
+      padding-left: $spacing-unit / 2;
+      padding-right: $spacing-unit / 2;
     }
   }
 

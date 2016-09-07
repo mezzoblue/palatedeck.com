@@ -57,8 +57,10 @@ setInterval(function() {
 function updateHeaderSize() {
    if ($(window).width() < 800) {
         headerObj.addClass("header-small");
+        headerObj.removeClass("header-large");
     } else {
         headerObj.removeClass("header-small");
+        headerObj.addClass("header-large");
         // reset the small screen menu
         navObj.removeClass("visible").children("ul").css({
             height: "",

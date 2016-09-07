@@ -30,6 +30,8 @@
 //
 .page-section-buy-intro {
 
+  padding: $spacing-unit 0;
+
   h1 {
     margin: 0;
     font-size: $small-font-size;
@@ -50,6 +52,7 @@
 
 
   @include screen-medium {
+    padding-top: $spacing-unit * 3;
     min-height: 60vh;
     h1, p {
       text-align: left;

@@ -33,8 +33,11 @@
   min-height: 20vh;
 
   .header-secondary {
-    margin: $spacing-unit * 2 0 0 0;
+    margin: $spacing-unit 0 0 0;
     text-align: left;
+    @include screen-medium {
+      margin-top: $spacing-unit * 2;
+    }
   }
   .post-meta {
     margin: 0.5rem 0 0 0;
@@ -84,9 +87,12 @@
 }
 .post-back-initial {
   .post-back-link {
-    padding: $spacing-unit * 2.5 0 0 0;
+    padding: $spacing-unit / 2 0 0 0;
     margin: 0;
     border-top: none;
+    @include screen-medium {
+      padding: $spacing-unit * 2.5 0 0 0;
+    }
   }
 }
 
@@ -150,12 +156,9 @@
 .post-listing {
 
   li {
-    display: flex;
-    align-items: center;
     opacity: 0.9;
     transition: opacity 0.15s ease-out;
 
-    padding: 80px 20px 30px 20px;
     list-style: none;
     background-color: rgba($brown-mid, 0.2);
     background-size: cover;
@@ -165,7 +168,10 @@
   }
   a {
     display: block;
+    width: 100%;
     height: 100%;
+    padding: 80px 20px 30px 20px;
+
     color: $background-colour;
     text-decoration: none;
   }

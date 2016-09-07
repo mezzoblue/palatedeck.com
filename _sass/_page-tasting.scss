@@ -34,17 +34,20 @@
 
 
 .page-section-tasting-intro {
+  padding: $spacing-unit * 2 0;
 
   h1 {
-    padding-top: $spacing-unit * 2.5;
     margin: 0 0 0.5rem 0;
     font-size: $small-font-size;
+    @include screen-medium {
+      padding-top: $spacing-unit * 2.5;
+    }
   }
 
   @include screen-xsmall {
     h1, p {
-      padding-left: $spacing-unit;
-      padding-right: $spacing-unit;
+      padding-left: $spacing-unit / 2;
+      padding-right: $spacing-unit / 2;
     }
   }
 

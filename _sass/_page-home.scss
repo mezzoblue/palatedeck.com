@@ -67,11 +67,15 @@
 //
 
 .page-section-home-video {
-    padding: $spacing-unit * 2 0;
+    padding: $spacing-unit 0;
     text-align: center;
     img {
       border: solid 1px rgba(#9a9a9a, 0.7);
       border-radius: 6px;
+    }
+
+    @include screen-medium {
+      padding: $spacing-unit * 2 0;
     }
 }
 
@@ -133,14 +137,20 @@
 
 
 .home-about-lockup {
-  display: flex;
   align-items: center;
 
-  .img {
-    flex: 30% 1 0;
+  img {
+    margin-bottom: 1rem;
   }
-  p {
-    flex: auto 1 1;
-    padding-left: $spacing-unit;
+
+  @include screen-xsmall {
+    display: flex;
+    .img {
+      flex: 30% 1 0;
+    }
+    p {
+      flex: auto 1 1;
+      padding-left: $spacing-unit;
+    }
   }
 }

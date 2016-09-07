@@ -246,6 +246,9 @@ $xxlarge: 1280px;
     width: 100%;
     border-bottom: dotted 1px $peach;
     margin-bottom: 0.75rem;
+    &:last-child {
+      border-bottom: none;
+    }
     @include screen-small {
       flex: 50% 0 1;
       margin: 0;
@@ -481,6 +484,7 @@ $xxlarge: 1280px;
     display: inline-block;
     max-width: 120px;
     border-radius: 50%;
+    margin-bottom: 1rem;
   }
 }
 .media-img-medium {

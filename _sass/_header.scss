@@ -72,37 +72,44 @@
   text-align: right;
 
   ul {
-    display: flex;
-    flex-wrap: wrap;
     margin: 0;
-
-    background: rgba($brown-mid, 0.2);
-
     overflow: hidden;
     transition: max-height 0.25s ease-out, margin-top 0.25s ease-out;
+
+    .header-scripted.header-small & {
+      display: flex;
+      flex-wrap: wrap;
+      background: rgba($brown-mid, 0.2);
+    }
   }
   li {
+    display: block;
     flex: 50% 0 0;
 
-    display: block;
     padding: 0;
     margin: 0;
     list-style: none;
     line-height: 1;
-    text-align: center;
+
+    .header-scripted.header-small & {
+      text-align: center;
+    }
 
     a {
-      padding: 1rem 0;
-      display: inline-block;
+      display: block;
 
       color: $background-colour;
       font-family: georgia, serif; // Georgia is just better at this font size
+      font-family: $base-font-family;
       font-size: 0.5 * $base-font-size;
       letter-spacing: 0.1rem;
       line-height: 2rem;
       text-transform: uppercase;
       text-decoration: none;
 
+      .header-scripted.header-small & {
+        padding: 1rem 0;
+      }
     }
 
     @include screen-medium {
@@ -131,6 +138,9 @@
       display: inline-block;
       padding: 0;
       margin: 0 0 0 1rem;
+      a {
+        display: inline-block;
+      }
     }
 
   }
