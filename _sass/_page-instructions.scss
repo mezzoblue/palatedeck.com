@@ -1,0 +1,76 @@
+/*
+
+    Instructions Page custom styling
+
+*/
+
+
+//
+// colour tweaks to site-wide header
+//
+.page-instructions {
+
+  .header-opaque {
+    background-color: rgba($blue-strong, 0.6);
+  }
+
+  .site-nav .site-nav-buy a {
+    &:hover, &:focus {
+      color: $blue-strong;
+    }
+  }
+
+}
+
+
+.page-section-instructions-intro {
+
+  h1 {
+    padding-top: $spacing-unit * 2.5;
+    margin: 0 0 0.5rem 0;
+    font-size: $small-font-size;
+  }
+
+  @include screen-xsmall {
+    h1, p {
+      padding-left: $spacing-unit;
+      padding-right: $spacing-unit;
+    }
+  }
+
+  @include screen-medium {
+    min-height: 60vh;
+    h1, p {
+      text-align: left;
+      padding-left: 40%;
+      padding-right: 0;
+    }
+  }
+
+  @include screen-large {
+    min-height: 70vh;
+    h1, p {
+      padding-left: 60%;
+    }
+  }
+
+}
+
+
+
+.page-section-instructions-athome {
+  padding: $spacing-unit * 2 0;
+}
+.page-section-instructions-attaprooms {
+  padding: $spacing-unit * 2 0;
+  color: $text-colour;
+  // @include screen-large {
+  //   p {
+  //     padding-left: 30%;
+  //   }
+  // }
+}
+.page-section-instructions-manual {
+  padding-top: $spacing-unit * 2;
+}
+

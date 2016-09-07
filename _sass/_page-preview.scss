@@ -1,0 +1,232 @@
+/*
+
+    Preview Page custom elements
+
+*/
+
+
+//
+// everything below here stolen from page-home with a couple of classes changed
+//
+.page-preview {
+
+  .header-opaque {
+    background-color: rgba(#aa4e40, 0.8);
+  }
+
+  .site-title {
+    position: relative;
+    display: block;
+    padding: 0;
+    text-align: center;
+
+    img {
+      width: 70%;
+      height: auto;
+      margin: $spacing-unit 0 1rem 0;
+    }
+    @include screen-xsmall {
+      img {
+        width: 47%;
+        margin: 0;
+      }      
+    }
+
+    &:hover, &:active {
+      cursor: default;
+    }
+  }
+
+  .site-nav {
+    flex: 100% 1 1;
+    order: 1;
+
+    a {
+      color: rgba($background-colour, 0.9);
+      &:hover, &:active {
+        color: $background-colour;
+      }
+    }
+  }
+
+  .site-nav .site-nav-buy a {
+  }
+
+}
+
+
+//
+// Other content elements
+//
+
+
+
+.preview-callout-intro {
+    text-align: center;
+
+    @include screen-small {
+        margin: 0 $spacing-unit * 2;
+    }
+
+    @include screen-large {
+        margin: 0 $spacing-unit * 3;
+        padding-bottom: $spacing-unit;
+    }
+
+    p {
+        text-align: left;
+        text-shadow: rgba($blue-strong, 0.2) 0 1px 1px;
+    }
+
+    .button {
+        &:hover, &:active {
+            color: $blue-mid;
+        }
+    }
+}
+
+
+
+
+
+.preview-example {
+  // max-width: 600px;
+  margin: $spacing-unit auto;
+
+  img {
+    margin-bottom: 1rem;
+  }
+  figcaption {
+    font-size: $small-font-size;
+    line-height: $spacing-unit / 1.5;
+  }
+
+  @include screen-small {
+    display: flex;
+    align-items: center;
+    a {
+      flex: 40% 1 1;
+    }
+    figcaption {
+      flex: 60% 1 1;
+      padding-left: 4rem;
+    }
+  }
+}
+
+
+.page-sub-section {
+  margin-bottom: $spacing-unit * 1.5;
+  &:last-child {
+    margin-bottom: 0;
+  }
+}
+
+
+.page-section-card-design {
+  background-color: lighten($peach, 15%);
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba($peach, 0.3) 0%,
+      rgba($background-colour, 0.3) 100%
+    );
+
+}
+
+
+.preview-section-why {
+  padding: ($spacing-unit * 2) 0;
+  text-align: center;
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0) 0%,
+      rgba($green-mid, 0.4) 100%
+    );
+
+  .box {
+    max-width: 300px;
+    margin: $spacing-unit 0;
+  }
+
+  p {
+    text-align: left;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+
+  @include screen-medium {
+    .box {
+      float: right;
+      margin: 2rem 0 2rem 2rem;
+    }
+  }
+
+}
+
+
+
+.preview-section-how, .preview-section-who {
+  padding: ($spacing-unit * 2) 0;
+}
+
+.preview-section-box {
+  padding-top: $spacing-unit * 2;
+}
+
+.preview-section-future {
+  padding-bottom: $spacing-unit * 2;
+}
+
+.preview-section-you {
+  padding-top: $spacing-unit * 2;
+  padding-bottom: $spacing-unit * 1.5;
+  text-align: center;
+  p {
+    text-align: left;
+  }
+  .button {
+    display: inline-block;
+    margin: 1rem 0;
+
+    color: $orange-mid;
+    border-color: $orange-mid;
+
+    &:hover, &:active {
+        color: $orange-strong;
+        border-color: $orange-strong;
+    }
+
+  }
+}
+
+.preview-section-who {
+  background-image:
+    linear-gradient(
+      to bottom,
+      rgba($orange-light, 0) 0%,
+      rgba($red-mid, 0.4) 100%
+    );
+  p:last-child {
+    margin-bottom: 0;
+  }
+
+}
+
+
+
+
+.expand-block {
+  overflow: hidden;
+  height: 0;
+  max-height: 0;
+  transition: max-height 0.15s ease-out;
+
+  &.expanded {
+    height: auto;
+    max-height: 300px;
+  }
+}

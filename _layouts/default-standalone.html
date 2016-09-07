@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+
+  {% include head.html %}
+
+  <body class="page-{{ page.class }}">
+  	<div class="page-wrap">
+
+
+	    {{ content }}
+
+
+	    {% include footer.html %}
+
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+	<script src="/script/header.js"></script>
+	<script src="/script/faux-carousel.js"></script>
+	<script src="/script/magnific.js"></script>
+	<script>
+		$(document).ready(function() {
+		  $('.image-zoom').magnificPopup({
+			gallery: {
+				// options for gallery
+				enabled: true
+			},
+		  	type:'image',
+
+			// Delay in milliseconds before popup is removed
+			removalDelay: 300,
+
+			// Class that is added to popup wrapper and background
+			// make it unique to apply your CSS animations just to this exact popup
+			mainClass: 'mfp-fade'
+		  });
+		});
+	</script>
+
+
+  </body>
+
+</html>

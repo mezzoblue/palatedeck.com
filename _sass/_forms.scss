@@ -1,0 +1,33 @@
+/*
+
+    Form element base styling
+
+*/
+
+
+input {
+	padding: 0.5rem;
+	border: solid 1px $brown-mid;
+
+	&:focus {
+		border-color: $brown-strong;
+		outline: none;
+		box-shadow: rgba($brown-strong, 0.25) 0 1px 4px;
+	}
+}
+
+button {
+	padding: 0.5rem 1rem;
+	border: solid 1px $red-mid;
+	border-radius: 2px;
+	color: $background-colour;
+	background: $red-mid;
+
+	text-transform: uppercase;
+
+	&:hover, &:focus {
+		border-color: $red-strong;
+		background-color: $red-strong;
+		cursor: pointer;
+	}
+}

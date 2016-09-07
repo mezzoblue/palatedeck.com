@@ -1,0 +1,526 @@
+/*
+
+    Base layout variables
+
+*/
+$peak-width: 60rem;
+
+
+
+/*
+
+    Base media query mixins
+
+*/
+$xxsmall: 320px;
+$xsmall: 480px;
+$small: 640px;
+$medium: 800px;
+$large: 960px;
+$xlarge: 1120px;
+$xxlarge: 1280px;
+
+@mixin screen-xxlarge {
+  @media (min-width: #{$xxlarge + 1px}) {
+    @content;
+  }
+}
+@mixin screen-xlarge {
+  @media (min-width: #{$xlarge + 1px}) {
+    @content;
+  }
+}
+@mixin screen-large {
+  @media (min-width: #{$large + 1px}) {
+    @content;
+  }
+}
+
+@mixin screen-medium {
+  @media (min-width: #{$medium + 1px}) {
+    @content;
+  }
+}
+@mixin screen-small {
+  @media (min-width: #{$small + 1px}) {
+    @content;
+  }
+}
+@mixin screen-xsmall {
+  @media (min-width: #{$xsmall + 1px}) {
+    @content;
+  }
+}
+@mixin screen-xxsmall {
+  @media (min-width: #{$xxsmall + 1px}) {
+    @content;
+  }
+}
+
+
+
+/*
+
+    Base Layout styling
+
+*/
+
+
+
+//
+//  Base responsive layout
+//
+.site-header .wrapper,
+.site-footer .wrapper {
+  margin: 0 0.5rem;
+  @include screen-medium {
+    margin: 0 $spacing-unit;
+  }
+}
+.page-title .wrapper,
+.page-section .wrapper {
+    margin: 0 $spacing-unit;
+
+    @include screen-large {
+        max-width: $peak-width;
+        padding-left: $spacing-unit;
+        padding-right: $spacing-unit;
+        margin: 0 auto;
+    }
+}
+
+
+//
+//  Body border only on larger screens
+//
+@include screen-small {
+  html {
+    height: 100%;
+  }
+  body {
+    min-height: 100%;
+    padding: 8px 0;
+    border-left: 8px solid $border-colour;
+    border-right: 8px solid $border-colour;
+
+    &::before, &::after {
+      content: "";
+      position: fixed;
+      z-index: 50;
+      background: $border-colour;
+      left: 0;
+      right: 0;
+      height: 8px;
+    }
+    &::before {
+      top: 0;
+    }
+    &::after {
+      bottom: 0;
+    }
+  }
+}
+
+
+
+
+
+
+//
+//  SECTION MODULE
+//  The page section system
+//
+.page-section-invisible {
+  padding: 0;
+}
+.page-section-small {
+  padding: ($spacing-unit / 2) 0;
+}
+.page-section {
+  padding: ($spacing-unit / 2) 0;
+  @include screen-small {
+    padding: $spacing-unit 0;
+  }
+}
+.page-section-large {
+  padding: ($spacing-unit * 2) 0;
+}
+
+// lighter-coloured page sections
+.page-section-red-light {
+  background: $red-light;
+}
+.page-section-orange-light {
+  background: $orange-light;
+}
+.page-section-green-light {
+  background: $green-light;
+}
+.page-section-blue-light {
+  background: $blue-light;
+}
+.page-section-peach {
+  background: $peach;
+}
+
+// mid-coloured page sections
+@mixin panel-reversed {
+  color: $background-colour;
+
+  p {
+    color: rgba($background-colour, 0.8);
+  }
+  a {
+    color: $background-colour;
+  }
+}
+  
+.page-section-red-mid {
+  @include panel-reversed;
+  background: $red-mid;
+}
+.page-section-orange-mid {
+  @include panel-reversed;
+  background: $orange-mid;
+}
+.page-section-green-mid {
+  @include panel-reversed;
+  background: $green-mid;
+}
+.page-section-blue-mid {
+  @include panel-reversed;
+  background: $blue-mid;
+}
+.page-section-brown-mid {
+  @include panel-reversed;
+  background: $brown-mid;
+}
+
+// strong-coloured page sections
+.page-section-red-strong {
+  @include panel-reversed;
+  background: $red-strong;
+}
+.page-section-orange-strong {
+  @include panel-reversed;
+  background: $orange-strong;
+}
+.page-section-green-strong {
+  @include panel-reversed;
+  background: $green-strong;
+}
+.page-section-blue-strong {
+  @include panel-reversed;
+  background: $blue-strong;
+}
+.page-section-brown-strong {
+  @include panel-reversed;
+  background: $brown-strong;
+}
+
+
+
+//
+//  PANEL MODULE
+//  The content panel system
+//
+
+// basic setup
+@mixin panel-setup {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 0;
+    margin: 0;
+
+    .panel-sub {
+      padding: 0;
+      margin: 0;
+      list-style: none;
+    }
+}
+.panel-dual {
+  @include panel-setup;
+  // we only want the extended layout on larger screens
+  .panel-sub {
+    width: 100%;
+    border-bottom: dotted 1px $peach;
+    margin-bottom: 0.75rem;
+    @include screen-small {
+      flex: 50% 0 1;
+      margin: 0;
+      border: none;
+    }
+  }
+}
+.panel-triple {
+  // we only want the extended layout on larger screens
+  @include screen-small {
+    @include panel-setup;
+    .panel-sub {
+      flex: 33% 0 1;
+    }
+  }
+}
+.panel-padded {
+
+  // default layout
+  .panel-sub {
+    padding: $spacing-unit / 3 0;
+  }
+  h3 {
+    margin-bottom: 0;
+  }
+  p:first-child {
+    margin-top: 0;
+  }
+
+  // we only want the extended layout on larger screens
+  @include screen-small {
+    .panel-sub {
+      padding: $spacing-unit / 1.5 $spacing-unit / 3;
+    }
+  }
+
+
+}
+
+
+
+//
+//  CARD ITEMIZATION
+//  show the card breakdown in each edition
+//
+.card-list {
+
+  margin: $spacing-unit 0 0 0;
+
+  .header-inline {
+    margin: 0;
+    font-size: $small-font-size;
+    line-height: $spacing-unit / 1.5;
+    font-weight: bold;
+    letter-spacing: 0;
+    text-transform: none;
+  }
+  li {
+    padding: $spacing-unit / 2;
+    margin: 0;
+    list-style: none;
+    text-align: center;
+  }
+  img {
+    max-width: 150px;
+  }
+  p {
+    font-size: $small-font-size;
+    line-height: $spacing-unit / 1.5;
+    text-align: left;
+  }
+
+  @include screen-xsmall {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: 50% 1 1;
+    }
+  }
+
+  @include screen-medium {
+    li {
+      flex: 33% 1 1;
+    }
+  }
+}
+
+
+//
+//  PHOTO GRID
+//  For grids of photos of course
+//
+.photo-grid {
+
+  margin: $spacing-unit 0;
+
+  li {
+    padding: $spacing-unit / 2;
+    margin: 0;
+    list-style: none;
+  }
+  img {
+    max-width: 100%;
+  }
+
+  @include screen-xsmall {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: 50% 0 1;
+    }
+  }
+
+  @include screen-medium {
+    li {
+      flex: 33% 0 1;
+    }
+  }
+
+  @include screen-large {
+    li {
+      flex: 25% 0 1;
+    }
+  }
+
+}
+
+
+
+
+//
+//  PRODUCT ITEMIZATION
+//  show various editions
+//
+
+.product-list {
+
+  > li {
+    padding: 0 0 $spacing-unit * 1.5 0;
+    margin: 0 0 $spacing-unit * 1.5 0;
+    border-bottom: dotted 1px $peach;
+    list-style: none;
+    text-align: center;
+
+    &:last-child {
+      border: none;
+    }
+
+    @include screen-medium {
+      display: flex;
+      align-items: center;
+      flex-wrap: wrap;
+      text-align: left;
+    }
+
+    h3 {
+      @include screen-medium {
+        flex: 80% 1 1;      
+        order: 1;
+        margin: 0 0 $spacing-unit 0;
+      }
+    }
+
+    h4 {
+      font-size: $small-font-size;
+      display: inline;
+      letter-spacing: 0;
+      &::after {
+        content: ": ";
+      }
+    }
+    ul {
+      margin: 0;
+      display: inline;
+    }
+    li {
+      @include type-base-small;
+      display: inline;
+      margin: 0;
+      list-style: none;
+      &::after {
+        content: ", ";
+      }
+      &:last-child::after {
+        content: "";
+      }
+    }
+  }
+
+}
+
+.product-list-img {
+  @include screen-medium {
+    flex: 200px 0 0;
+    order: 3;
+  }
+
+  img {
+    max-width: 200px;
+  }
+}
+
+.product-list-desc {
+  text-align: left;
+  @include screen-medium {
+    flex: 60% 1 1;
+    order: 4;
+    padding-left: $spacing-unit;
+  }
+}
+
+.product-list-buy {
+  margin-top: 1rem;
+  text-align: center;
+  @include screen-medium {
+    flex: 120px 1 1;
+    order: 2;
+    margin: 0 0 $spacing-unit 0;
+  }
+  .button {
+    display: inline-block;
+  }
+}
+
+
+//
+//  MEDIA OBJECT
+//  Basically your classic media object by another name
+//
+.media-img {
+  text-align: center;
+  img {
+    display: inline-block;
+    max-width: 120px;
+    border-radius: 50%;
+  }
+}
+.media-img-medium {
+  img {
+    max-width: 180px;
+  }
+}
+.media-img-large {
+  img {
+    max-width: 240px;
+  }
+}
+
+@include screen-small {
+  .media {
+    display: flex;
+    align-items: center;
+  }
+  .media-img {
+    flex: 80px 1 0;
+    img {
+      max-width: 80px;
+      margin-bottom: 1rem;
+    }
+  }
+  .media-img-medium {
+    flex: 120px 1 0;
+    img {
+      max-width: 120px;
+    }
+  }
+  .media-img-large {
+    flex: 180px 1 0;
+    img {
+      max-width: 180px;
+    }
+  }
+  .media-caption {
+    flex: auto 1 1;
+    padding-left: $spacing-unit;
+  }
+}
+

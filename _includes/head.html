@@ -1,0 +1,23 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:site" content="@thepalatedeck">
+  <meta name="twitter:url" property="og:url" content="http://palatedeck.com/">
+  <meta name="twitter:title" property="og:title" content="The Palate Deck">
+  <meta name="twitter:description" property="og:description" content="A Better Beer Tasting Experience">
+  <meta name="twitter:image" property="og:image" content="http://palatedeck.com/favicon.ico">
+
+  
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description }}{% endif %}">
+
+  <link rel="stylesheet" href="{{ "/css/main.css" | prepend: site.baseurl }}">
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}">
+
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ "/feed.xml" | prepend: site.baseurl | prepend: site.url }}">
+</head>
+

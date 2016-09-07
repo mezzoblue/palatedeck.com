@@ -1,0 +1,67 @@
+/*
+
+    Tasting Page custom styling
+
+*/
+
+
+.page-tasting {
+
+  //
+  // colour tweaks to site-wide header
+  //
+  .header-opaque {
+    background-color: rgba($orange-mid, 0.8);
+  }
+
+  .site-nav .site-nav-buy a {
+    &:hover, &:focus {
+      color: $orange-strong;
+    }
+  }
+
+
+  .panel-sub {
+
+    &:first-child, &:nth-child(2) {
+      background: none;
+    }
+  }
+
+
+}
+
+
+
+.page-section-tasting-intro {
+
+  h1 {
+    padding-top: $spacing-unit * 2.5;
+    margin: 0 0 0.5rem 0;
+    font-size: $small-font-size;
+  }
+
+  @include screen-xsmall {
+    h1, p {
+      padding-left: $spacing-unit;
+      padding-right: $spacing-unit;
+    }
+  }
+
+  @include screen-medium {
+    min-height: 60vh;
+    h1, p {
+      text-align: left;
+      padding-left: 40%;
+      padding-right: 0;
+    }
+  }
+
+  @include screen-large {
+    min-height: 70vh;
+    h1, p {
+      padding-left: 60%;
+    }
+  }
+
+}

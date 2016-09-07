@@ -1,0 +1,146 @@
+/*
+
+    Home Page custom elements
+
+*/
+
+
+//
+// home page logo & nav variation
+//
+.page-home {
+
+  .header-opaque {
+    background-color: rgba(#aa4e40, 0.8);
+  }
+
+  .site-title {
+    position: relative;
+    top: 0;
+
+    display: block;
+    padding: 0;
+    text-align: center;
+
+    img {
+      width: 80%;
+      height: auto;
+      margin-top: $spacing-unit;
+    }
+    @include screen-xsmall {
+      img {
+        width: 47%;
+        margin-top: 0;
+      }      
+    }
+
+    &:hover, &:active {
+      cursor: default;
+    }
+  }
+
+  .site-nav {
+
+    flex: 1 1 auto;
+
+    li a {
+      color: rgba($background-colour, 0.9);
+      &:hover, &:active {
+        color: $background-colour;
+      }
+    }
+  }
+
+  @include screen-medium {
+    li.site-nav-buy a {
+      &:hover, &:focus {
+        color: $red-strong;
+      }
+    }
+  }
+
+}
+
+
+//
+// Section formatting
+//
+
+.page-section-home-video {
+    padding: $spacing-unit * 2 0;
+    text-align: center;
+    img {
+      border: solid 1px rgba(#9a9a9a, 0.7);
+      border-radius: 6px;
+    }
+}
+
+
+.page-section-home-about {
+  padding: $spacing-unit * 2 0;
+}
+
+
+.page-section-home-articles {
+  padding: $spacing-unit * 3 0 0 0;
+
+  .header-secondary {
+    margin-bottom: $spacing-unit;
+  }
+
+  &::after {
+    display: block;
+    content: "★ ★ ★";
+    margin: 2rem 0;
+
+    color: $brown-mid;
+    font-size: $small-font-size;
+    text-align: center;
+  }
+
+}
+
+
+//
+// Other content elements
+//
+
+.home-callout-intro {
+    text-align: center;
+
+    @include screen-small {
+        margin: 0 $spacing-unit * 2;
+    }
+
+    @include screen-large {
+        margin: 0 $spacing-unit * 4;
+        padding-bottom: $spacing-unit;
+    }
+
+    p {
+        text-align: left;
+        text-shadow: rgba($blue-strong, 0.2) 0 1px 1px;
+    }
+
+    .button {
+        display: inline-block;
+        margin-bottom: $spacing-unit / 2;
+        &:hover, &:active {
+            color: $blue-mid;
+        }
+    }
+}
+
+
+.home-about-lockup {
+  display: flex;
+  align-items: center;
+
+  .img {
+    flex: 30% 1 0;
+  }
+  p {
+    flex: auto 1 1;
+    padding-left: $spacing-unit;
+  }
+}

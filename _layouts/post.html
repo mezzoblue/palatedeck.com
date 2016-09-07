@@ -1,0 +1,45 @@
+---
+layout: default
+---
+<article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+
+	<div class="page-section page-section-post-intro">
+		<div class="wrapper">
+
+		    {% if page.back-link %}
+		    	<div class="post-back-initial">
+					{% include back-link.html %}
+				</div>
+		    {% endif %}
+
+		    <h2 class="header-secondary">{{ page.title }}</h2>
+
+		    {% if page.sub-title %}
+			    <p class="post-meta">{{ page.sub-title }}</p>
+			{% endif %}
+		    {% if page.date %}
+			    <p class="post-meta-date"><time datetime="{{ page.date | date_to_xmlschema }}" itemprop="datePublished">{{ page.date | date: "%b %-d, %Y" }}</time></p>
+			{% endif %}
+
+		</div>
+	</div>
+
+
+	<div class="page-section page-section-post-body">
+	  <div class="wrapper">
+
+			<div class="post-content" itemprop="articleBody">
+				{{ content }}
+
+				{% if page.back-link %}
+					<div class="post-back-link">
+						<a href="/{{ page.back-link }}">&lt; Back to {{ page.back-link-text }}</a>
+					</div>
+				{% endif %}
+
+			</div>
+
+		</div>
+	</div>
+
+</article>

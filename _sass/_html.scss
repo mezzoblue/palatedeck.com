@@ -1,0 +1,54 @@
+/*
+
+    Basic HTML reset & formatting
+
+*/
+
+
+//
+//  Reset some basic elements
+//
+body, h1, h2, h3, h4, h5, h6,
+p, blockquote, pre, hr,
+dl, dd, ol, ul, figure {
+    margin: 0;
+    padding: 0;
+}
+
+
+//
+//  Restore sanity
+//
+* {
+    box-sizing: border-box;
+}
+
+
+
+body {
+    color: $text-colour;
+    background: $background-colour;
+}
+
+a {
+    color: $accent-colour;
+    transition: color ease-out 0.2s;
+    &:hover, &:active {
+        color: $red-strong;
+    }
+}
+li {
+    margin: 0 0 1rem 2rem;
+}
+
+hr {
+    clear: both;
+    height: 0;
+    margin: 4rem 0;
+    border: solid 1px $text-colour;
+    border-width: 1px 0 0 0;
+}
+
+img {
+    max-width: 100%;
+}

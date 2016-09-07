@@ -1,0 +1,104 @@
+/*
+
+    Footer styling
+
+*/
+
+.site-footer {
+
+    padding: 1rem;
+
+    font-family: $alt-font-family;
+    font-size: 0.5 * $base-font-size;
+    letter-spacing: 0.1em;
+
+    color: rgba($background-colour, 0.6);
+
+    background-color: $brown-strong;
+    background-image:
+        linear-gradient(
+            to bottom,
+            rgba($peach, 0.3) 0%,
+            rgba($brown-strong, 0) 100%);
+
+    .wrapper {
+        text-align: center;
+        @include screen-medium {
+            text-align: left;
+            display: flex; 
+            flex-direction: row;
+        }
+    }
+
+    .footer-logo svg {
+        width: 24px;
+        height: 24px;
+        fill: $background-colour;
+    }
+
+    p {
+        margin: 0 0 1rem 0;
+        text-transform: uppercase;
+        @include screen-medium {
+            flex: 50% 1 1;
+            margin-bottom: 0;
+        }
+    }
+
+	a {
+        color: #fff;
+	}
+
+    @include screen-medium {
+        padding: $spacing-unit 0;
+    }
+
+}
+
+
+
+
+.site-footer-social {
+
+	margin: 0;
+
+    li {
+        display: inline-block;
+        margin: 0 0 0 1rem;
+        list-style: none;
+    }
+
+    a {
+        display: inline-block;
+        opacity: 0.5;
+        width: 16px;
+        height: 16px;
+        padding-left: 16px;
+        overflow: hidden;
+        background-size: 16px 16px;
+        background-repeat: no-repeat;
+        transition: opacity 0.2s ease-out;
+        &:hover, &:focus {
+            opacity: 1;
+        }
+    }
+
+    .twitter a {
+        background-image: url(/images/ico-twitter.svg);
+    }
+    .facebook a {
+        background-image: url(/images/ico-facebook.svg);
+    }
+    .instagram a {
+        background-image: url(/images/ico-instagram.svg);
+    }
+    .contact a {
+        background-image: url(/images/ico-contact.svg);
+    }
+
+    @include screen-medium {
+        flex: 50% 1 1;
+        text-align: right;
+    }
+
+}

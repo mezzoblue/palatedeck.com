@@ -1,0 +1,132 @@
+/*
+
+    Style Guide custom elements
+
+*/
+
+// only place on the site this is an appropriate element to use
+code {
+    color: $brown-mid;
+    font-family: monaco, monospace;
+    font-size: $base-font-size * 0.769;
+    font-weight: bold;
+
+    .page-section-red-mid &, .page-section-orange-mid &, .page-section-green-mid &, .page-section-blue-mid &, .page-section-brown-mid &,
+    .page-section-red-strong &, .page-section-orange-strong &, .page-section-green-strong &, .page-section-blue-strong &, .page-section-brown-strong & {
+        color: rgba($background-colour, 0.8);
+    }
+}
+
+
+//
+//  style guide dividers
+//
+.styleguide-example {
+    margin: ($spacing-unit) 0;
+}
+.styleguide-page-section {
+    background: lighten($brown-mid, 45%);
+    border-bottom: solid 4px $background-colour;
+}
+
+
+//
+//  Slightly nicer formatting of examples
+//
+.styleguide-example-usage {
+    padding: 3px 6px;
+    border-radius: 4px;
+    background: lighten($brown-mid, 40%);
+}
+
+
+//
+//  primary palette listing
+//
+.styleguide-palette {
+    display: flex;
+    flex-wrap: wrap;
+
+    code {
+        color: $background-colour;
+        font-weight: 900;
+    }
+
+    li {
+        flex: 33% 1 1;
+
+        list-style: none;
+        padding: 1rem;
+        margin: 0;
+        border: solid 1px $background-colour;
+        border-width: 0 1px 1px 0;
+
+        text-align: center;
+    }
+
+    .styleguide-red-strong {
+        background: $red-strong;
+    }
+    .styleguide-red-mid {
+        background: $red-mid;
+    }
+    .styleguide-red-light {
+        background: $red-light;
+        code {
+            color: $text-colour;
+        }
+    }
+
+    .styleguide-orange-strong {
+        background: $orange-strong;
+    }
+    .styleguide-orange-mid {
+        background: $orange-mid;
+    }
+    .styleguide-orange-light {
+        background: $orange-light;
+        code {
+            color: $text-colour;
+        }
+    }
+
+    .styleguide-green-strong {
+        background: $green-strong;
+    }
+    .styleguide-green-mid {
+        background: $green-mid;
+    }
+    .styleguide-green-light {
+        background: $green-light;
+        code {
+            color: $text-colour;
+        }
+    }
+
+    .styleguide-blue-strong {
+        background: $blue-strong;
+    }
+    .styleguide-blue-mid {
+        background: $blue-mid;
+    }
+    .styleguide-blue-light {
+        background: $blue-light;
+        code {
+            color: $text-colour;
+        }
+    }
+
+    .styleguide-brown-strong {
+        background: $brown-strong;
+    }
+    .styleguide-brown-mid {
+        background: $brown-mid;
+    }
+    .styleguide-peach {
+        background: $peach;
+        code {
+            color: $text-colour;
+        }
+    }
+
+}

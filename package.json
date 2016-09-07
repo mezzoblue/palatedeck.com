@@ -1,0 +1,11 @@
+{
+  "name": "palatedeck",
+  "version": "0.1.0",
+  "description": "A Better Beer Tasting Experience",
+  "author": "@mezzoblue",
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-autoprefixer": "~2.1.0",
+    "grunt-contrib-cssmin": "~0.11.0"
+  }
+}

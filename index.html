@@ -1,0 +1,72 @@
+---
+layout: default-home
+class: home
+---
+
+<div class="page-section page-section-home">
+
+  <div class="wrapper">
+
+    <a class="site-title" href="{{ site.baseurl }}/">
+      <img src="/images/logo.png" alt="The Palate Deck" />
+    </a>
+
+
+    <div class="home-callout-intro">
+      <p>Discover what makes your favorite beer so great. The Palate Deck is your secret weapon when sampling flights at a brewery, or just enjoying a casual beer with friends.</p>
+
+      <a href="/about/" class="button button-reverse button-large">How It Works</a>
+    </div>
+
+  </div>
+
+</div>
+
+
+<div class="page-section page-section-home-video">
+  <div class="wrapper">
+    <img src="/images/video-poster.jpg" alt="Kickstarter video coming real soon">
+  </div>
+</div>
+
+
+
+<div class="page-section page-section-blue-mid page-section-home-about">
+  <div class="wrapper">
+    <h2 class="header-secondary"></h2>
+
+    <div class="home-about-lockup">
+      
+      <div class="img">
+        <a href="/about/"><img src="/images/illustration-box2.png" alt=""></a>
+      </div>
+
+      <p>The Palate Deck is a set of cards that fuel your conversation while drinking beer. More than just playing cards though, it’s an in-depth beer education that even tells you why you're experiencing certain flavors and sensations in any beer. <a href="/about/">Learn More</a></p>
+
+    </div>
+
+  </div>
+</div>
+
+
+
+<div class="page-section page-section-home-articles">
+  <div class="wrapper">
+
+    <h2 class="header-secondary">From the Blog</h2>
+
+    <ul class="post-listing">
+    {% for post in site.posts limit:4 %}
+      {% include blog-post-listing.html %}
+    {% endfor %}
+    </ul>
+
+  </div>
+</div>
+
+
+<div class="page-section">
+  <div class="wrapper">
+    {% include buy-bug.html %}
+  </div>
+</div>

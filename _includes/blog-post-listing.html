@@ -1,0 +1,11 @@
+{% if post.blog-image %}
+	<li class="photo blog-{{ post.blog-image }}">
+{% else %}
+	<li>
+{% endif %}
+	<a href="{{ post.url }}">
+		<h3>{{ post.title }}</h3>
+		<p>{{ post.date | date: '%B %-d, %Y' }}</h3>
+		<p>{{ post.short-desc }}</p>
+	</a>
+</li>

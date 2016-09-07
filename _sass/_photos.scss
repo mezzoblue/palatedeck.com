@@ -1,0 +1,177 @@
+// photo overlays 
+@mixin photo-header {
+  color: $background-colour;
+
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+
+  @include screen-medium {
+    padding-top: $spacing-unit * 3;
+  }
+}
+
+
+.page-section-product {
+  @include photo-header;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba($background-colour, 0.8) 0%,
+      rgba($background-colour, 0) 100%),
+    url(/images/photo-in-use.jpg);
+}
+
+
+.page-section-home {
+  @include photo-header;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba($red-strong, 0.2) 0%,
+      rgba($red-strong, 0) 100%),
+    linear-gradient(
+      to bottom,
+      rgba($red-strong, 0.8) 0%,
+      rgba($red-strong, 0.1) 100%),
+    url(/images/photo-notorious.jpg),
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0.1) 0%,
+      rgba($blue-mid, 0.8) 100%);
+  background-blend-mode: 
+    multiply,
+    normal,
+    normal,
+    normal;
+}
+
+.page-section-home-about {
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0.2) 0%,
+      rgba($green-mid, 0.2) 100%),
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0.8) 0%,
+      rgba($green-mid, 0.2) 100%);
+  background-blend-mode: 
+    overlay,
+    normal;
+}
+
+
+.page-section-about-intro {
+  @include photo-header;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0.2) 0%,
+      rgba($green-mid, 0.2) 100%),
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0.8) 0%,
+      rgba($green-mid, 0.2) 100%),
+    url(/images/photo-fhf.jpg),
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0.8) 0%,
+      rgba($green-mid, 0.5) 100%);
+  background-blend-mode: 
+    overlay,
+    normal,
+    normal,
+    normal;
+}
+
+
+.page-section-tasting-intro {
+  @include photo-header;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba($red-strong, 0.6) 0%,
+      rgba($orange-light, 0.4) 100%),
+    linear-gradient(
+      to bottom,
+      rgba($orange-light, 0.6) 0%,
+      rgba($red-strong, 0.4) 100%),
+    url(/images/photo-alibi.jpg),
+    linear-gradient(
+      to bottom,
+      rgba($orange-mid, 0.8) 0%,
+      rgba($red-strong, 0.5) 100%);
+  background-blend-mode: 
+    normal,
+    multiply,
+    normal,
+    normal;
+}
+
+
+.page-section-instructions-intro {
+  @include photo-header;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0.5) 0%,
+      rgba($peach, 0.2) 100%),
+    linear-gradient(
+      to bottom,
+      rgba($blue-strong, 0.9) 0%,
+      $peach 100%),
+    url(/images/photo-tire.jpg),
+    linear-gradient(
+      to bottom,
+      rgba($blue-mid, 0.8) 0%,
+      rgba($blue-mid, 0.5) 100%);
+  background-blend-mode: 
+    normal,
+    overlay,
+    normal,
+    normal;
+}
+.page-section-instructions-attaprooms {
+  @include photo-header;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba($peach, 0.5) 0%,
+      rgba($background-colour, 0.2) 100%),
+    url(/images/photo-taps.jpg),
+    linear-gradient(
+      to bottom,
+      rgba($peach, 0.8) 0%,
+      rgba($brown-mid, 0.5) 100%);
+  background-blend-mode: 
+    normal,
+    multiply,
+    normal;
+}
+
+
+.page-section-buy-intro {
+  @include photo-header;
+  background-image: 
+    linear-gradient(
+      to bottom,
+      rgba($brown-strong, 0.2) 0%,
+      rgba($brown-strong, 0) 70%,
+      rgba($peach, 0) 100%),
+    linear-gradient(
+      to bottom,
+      rgba($brown-strong, 0.6) 0%,
+      rgba($peach, 0) 100%),
+    url(/images/photo-jd.jpg),
+    linear-gradient(
+      to bottom,
+      rgba($brown-strong, 0.7) 0%,
+      rgba($peach, 0.7) 100%);
+  background-blend-mode: 
+    multiply,
+    normal,
+    normal,
+    normal;
+}
+

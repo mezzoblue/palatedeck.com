@@ -1,0 +1,37 @@
+---
+layout: page-scripts
+title: The Palate Deck Blog
+short-title: Blog
+class: blog
+permalink: /blog/
+---
+
+<div class="page-section page-section-blog-intro">
+
+  <div class="wrapper">
+
+    <h1 class="header-secondary">The Palate Deck Blog</h2>
+    <p>Tasting tips, beer trivia, and other fun stuff to read while you sample beer.</p>
+
+  </div>
+
+</div>
+
+
+
+
+
+<div class="page-section">
+  <div class="wrapper">
+
+    <ul class="post-listing">
+    {% for post in site.posts %}
+      {% include blog-post-listing.html %}
+    {% endfor %}
+    </ul>
+
+  </div>
+</div>
+
+
+{% include buy-bug.html %}

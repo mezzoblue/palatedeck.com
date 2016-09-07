@@ -1,0 +1,241 @@
+/*
+
+    About Page custom elements
+
+*/
+
+
+//
+// colour tweaks to site-wide header
+//
+.page-about {
+
+  .header-opaque {
+    background-color: rgba($blue-mid, 0.8);
+  }
+
+  @include screen-medium {
+    li.site-nav-buy a {
+
+      &:hover, &:focus {
+        color: $blue-mid;
+      }
+    }
+  }
+}
+
+
+.page-section-about-intro {
+  padding: $spacing-unit * 2 0;
+
+  h1 {
+    margin: 0 0 0.5rem 0;
+    font-size: $small-font-size;
+  }
+
+  @include screen-xsmall {
+    h1, p {
+      padding-left: $spacing-unit;
+      padding-right: $spacing-unit;
+    }
+  }
+
+  @include screen-medium {
+    min-height: 60vh;
+    h1 {
+      padding-top: $spacing-unit * 3;
+    }
+    h1, p {
+      text-align: left;
+      padding-left: 40%;
+      padding-right: 0;
+    }
+  }
+
+  @include screen-large {
+    min-height: 70vh;
+    h1, p {
+      padding-left: 60%;
+    }
+  }
+
+}
+
+
+// section spacing
+.page-section-what {
+  padding-top: $spacing-unit;
+  @include screen-small {
+    padding-top: $spacing-unit * 2;
+    .wrapper {
+      padding: 0 $spacing-unit * 2;
+    }
+  }
+}
+
+
+// because Carousels suck
+.faux-carousel-pane {
+
+  position: relative;
+
+  padding: 0 1rem ($spacing-unit * 1.5) 1rem;
+  margin: 0 0 2px 0;
+  list-style: none;
+
+  transition: 
+    max-height 0.25s ease-out,
+    opacity 0.25s ease-out;
+
+
+  &.hidden {
+    max-height: 0;
+    padding: 0;
+    border-top: none;
+    overflow: hidden;
+    opacity: 0;
+  }
+
+  .image {
+    text-align: center;
+    img {
+      max-width: 100%;
+      @include screen-xsmall {
+        max-width: 300px;
+      }
+      @include screen-medium {
+        max-width: 250px;
+      }
+    }
+  }
+
+  .next {
+
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: 0.5rem;
+
+    text-align: center;
+
+    opacity: 1;
+    transition: opacity 0.15s ease-out;
+
+
+    &.hidden {
+      opacity: 0;
+      cursor: default;
+    }
+  }
+
+  .button {
+    display: inline-block;
+
+    color: $blue-mid;
+    border-color: $blue-mid;
+
+    &::after {
+      display: inline-block;
+      content: " ";
+
+      position: relative;
+      top: 2px;
+
+      width: 24px;
+      height: 15px;
+      margin: 0 0 0 0.75rem;
+     
+      background-image: url(/images/ui-down-caret.png);
+      background-repeat: no-repeat;
+      background-size: 24px auto;
+    }
+
+    &:hover, &:active {
+        color: $blue-strong;
+        border-color: $blue-strong;
+
+        &::after {
+          background-position: 0 -21px;
+        }
+
+    }
+
+  }
+
+  &:first-child {
+    background: transparent;
+    .button::after {
+      animation-duration: 3s;
+      animation-name: blink-nag;
+      animation-iteration-count: infinite;
+    }
+  }
+
+  &:nth-child(2), &:last-child {
+    border-top: solid 2px rgba($brown-mid, 0.4);
+  }
+  &:last-child {
+    background: transparent;
+    padding-top: $spacing-unit * 2;
+  }
+
+  // annoying exception, but necessary
+  &.hidden:last-child {
+    padding-top: 0;
+  }
+
+  @include screen-medium {
+    display: flex;
+    align-items: center;
+    flex-direction: row-reverse;
+
+    .faux-carousel-pane {
+      max-height: 300px;
+      padding: $spacing-unit; 
+    }
+
+    .image {
+      flex: 0 1 300px;
+      img {
+        max-width: 100%;
+      }
+    }
+
+    .text {
+      flex: 1 1 60%;
+      padding-right: 4rem;
+    }
+
+    &:first-child, &:last-child {
+      flex-direction: row;
+      .text {
+        padding-left: 4rem;
+      }
+    }
+
+ }
+
+}
+
+
+@keyframes blink-nag {
+  from {
+    opacity: 0;
+  }
+
+  25% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  75% {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+  }
+}

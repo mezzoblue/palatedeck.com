@@ -1,0 +1,163 @@
+/*
+
+    Various KS Backing / Commerce components
+
+*/
+
+
+
+//
+// colour tweaks to site-wide header
+//
+.page-buy {
+
+  .header-opaque {
+    background-color: rgba($brown-strong, 0.6);
+  }
+
+  .site-nav .site-nav-buy a {
+    &:hover, &:focus {
+      color: $brown-mid;
+    }
+  }
+
+}
+
+
+
+//
+// Lead-in on the Buy page
+//
+.page-section-buy-intro {
+
+  h1 {
+    margin: 0;
+    font-size: $small-font-size;
+  }
+
+  label {
+    display: none;
+  }
+  input, .button {
+    display: block;
+    width: 100%;
+    margin: 0 0 0.25rem 0;
+  }
+  input {
+    color: $brown-strong;
+    border-color: $background-colour;
+  }
+
+
+  @include screen-medium {
+    min-height: 60vh;
+    h1, p {
+      text-align: left;
+    }
+
+    input, .button {
+      display: block;
+      width: 100%;
+    }
+
+    .pre-sale {
+      padding-top: $spacing-unit * 2;
+    }
+
+    .pre-sale-form {
+      padding-top: $spacing-unit * 3;
+      padding-left: 10%;
+    }
+
+    .wrapper {
+      display: flex;
+    }
+    .pre-sale, .pre-sale-form {
+      flex: 50% 1 1;
+    }
+    .pre-sale-form {
+      padding-left: 10%;
+    }
+
+  }
+
+  @include screen-large {
+    min-height: 70vh;
+  }
+
+}
+
+//
+// Product List formatting
+//
+
+.page-section-buy-products {
+
+  padding-top: $spacing-unit * 2;
+
+}
+
+
+
+//
+// pitch panel for the bottom
+//
+.buy-panel {
+
+  padding: 1.5rem;
+  // background-color: rgba($brown-mid, 0.3);
+  // background-image: linear-gradient(
+  //   to bottom,
+  //   rgba($orange-mid, 0.2) 0%,
+  //   rgba($peach, 0.2) 100%
+  // );
+  border: solid 1px rgba($brown-mid, 0.25);
+
+  text-align: center;
+  // box-shadow: rgba($brown-strong, 0.2) 0 10px 25px;
+
+  p {
+    text-align: left;
+  }
+
+  label {
+    display: none;
+  }
+
+  input, .button {
+    display: block;
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+
+  @include screen-small {
+    margin: 0 0 $spacing-unit 0;
+    input, .button {
+      display: inline-block;
+      width: auto;
+      margin: 0;
+    }
+  }
+
+  @include screen-medium {
+    padding: $spacing-unit $spacing-unit * 2;
+    margin: 0 $spacing-unit * 2 $spacing-unit $spacing-unit * 2;
+    p {
+      padding: 0 $spacing-unit;
+    }
+  }
+
+  @include screen-large {
+    input {
+      min-width: 350px;
+    }
+  }
+
+  @include screen-xlarge {
+    p {
+      text-align: center;
+    }
+  }
+
+}
+

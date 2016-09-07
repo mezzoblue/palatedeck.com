@@ -1,0 +1,208 @@
+/*
+
+    Post styling
+
+*/
+
+
+
+//
+//  POST IMAGES
+//  control classes to place blog post images
+//
+.blog-photo-pd-intro {background-image:
+    linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.5) 100%),
+    url(/images/photo-pd-intro-sm.jpg);
+}
+.blog-photo-beer-flights {background-image:
+    linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.5) 100%),
+    url(/images/photo-beer-flights-sm.jpg);
+}
+.blog-photo-alibi2 {background-image:
+    linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.5) 100%),
+    url(/images/photo-alibi2-sm.jpg);
+}
+
+
+
+//
+//  POST STYLING
+//  light formatting for bloggy pages
+//
+.page-section-post-intro {
+  min-height: 20vh;
+
+  .header-secondary {
+    margin: $spacing-unit * 2 0 0 0;
+    text-align: left;
+  }
+  .post-meta {
+    margin: 0.5rem 0 0 0;
+    font-family: $alt-font-family;
+    font-style: italic;
+  }
+  .post-meta-date {
+    margin: 1rem 0 0 0;
+    font-family: $base-font-family;
+    font-size: $small-font-size;
+    text-transform: uppercase;
+  }
+
+  @include screen-medium {
+    padding: $spacing-unit 0;
+  }
+}
+
+
+.page-section-post-body {
+  padding: 0;
+  background: rgba($brown-mid, 0.1);
+
+  .button {
+    display: inline-block;
+    margin: $spacing-unit auto;
+  }
+
+}
+
+.post-content {
+  padding: $spacing-unit 0 0;
+}
+
+.post-back-link {
+  display: block;
+  padding: $spacing-unit 0 $spacing-unit * 2 0;
+  margin-top: $spacing-unit;
+  border-top: dotted 1px $peach;
+  font-size: $small-font-size;
+
+  .sep {
+    display: inline-block;
+    margin: 0 0.25rem;
+    color: rgba($brown-mid, 0.4);
+  }
+}
+.post-back-initial {
+  .post-back-link {
+    padding: $spacing-unit * 2.5 0 0 0;
+    margin: 0;
+    border-top: none;
+  }
+}
+
+
+@include screen-medium {
+  .post-content {
+    padding: $spacing-unit 0 0 0;
+  }
+}
+
+
+
+//
+// Various content items
+//
+.definition {
+
+  padding-top: $spacing-unit;
+  margin-top: $spacing-unit;
+  border-top: dotted 1px $peach;
+
+  h3 {
+    margin: 0;
+    letter-spacing: 0;
+  }
+
+  &.separated dd {
+  	padding-bottom: $spacing-unit;
+  	margin-bottom: $spacing-unit;
+  	border-bottom: dotted 1px $peach;
+  }
+
+}
+
+.glass {
+
+	text-align: center;
+
+	img {
+		max-width: 110px;
+	}
+
+	p {
+		text-align: left;
+	}
+
+	@include screen-xsmall {
+		position: relative;
+		padding-right: 120px;
+		min-height: 140px;
+
+		img {
+			position: absolute;
+			right: 0;
+			top: 0.5rem;
+		}
+	}
+}
+
+
+.post-listing {
+
+  li {
+    display: flex;
+    align-items: center;
+    opacity: 0.9;
+    transition: opacity 0.15s ease-out;
+
+    padding: 80px 20px 30px 20px;
+    list-style: none;
+    background-color: rgba($brown-mid, 0.2);
+    background-size: cover;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  a {
+    display: block;
+    height: 100%;
+    color: $background-colour;
+    text-decoration: none;
+  }
+
+  h3, p {
+    margin: 0;
+  }
+
+  @include screen-small {
+    display: flex;
+    flex-wrap: wrap;
+    li {
+      flex: 49% 0 1;
+      margin: 0 2% 2% 0;      
+      &:nth-child(2n) {
+        margin-right: 0;
+      }
+    }
+  }
+
+}
+
+
+//
+// define some slightly more sane typography
+//
+.post-content {
+
+  .header-sub {
+    margin-top: $spacing-unit;
+  }
+
+}
+
+
+.blog-photo {
+  opacity: 0.8;
+  display: block;
+  margin: 0 0 $spacing-unit 0;
+}

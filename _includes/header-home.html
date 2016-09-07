@@ -1,0 +1,24 @@
+<header class="site-header" id="top">
+
+  <div class="wrapper">
+
+    <nav class="site-nav">
+
+      <ul>
+        {% assign navPages = site.pages | sort: 'nav-sort' %}
+        {% for navPage in navPages %}
+          {% if navPage.title %}
+            {% if navPage.nav-show %}
+              <li class="site-nav-{{ navPage.class }}">
+                <a href="{{ navPage.url | prepend: site.baseurl }}">{{ navPage.short-title }}</a>
+              </li>
+            {% endif %}
+          {% endif %}
+        {% endfor %}
+      </ul>
+
+    </nav>
+
+  </div>
+
+</header>

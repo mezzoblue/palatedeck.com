@@ -1,0 +1,40 @@
+/*
+
+    Base colour variables
+
+*/
+
+//
+// Primary palette
+//
+$red-strong: #d43f2d;
+$red-mid: #da6853;
+$red-light: #e19387;
+
+$orange-strong: #e77c33;
+$orange-mid: #ea9c56;
+$orange-light: #f5c37f;
+
+$green-strong: #395c2c;
+$green-mid: #709359;
+$green-light: #aacc91;
+
+$blue-strong: #19424a;
+$blue-mid: #33767e;
+$blue-light: #8acad1;
+
+$brown-strong: #4b4543;
+$brown-mid: #988073;
+
+$peach: #e6baa4;
+
+
+// functional colour assignments
+
+$text-colour: $brown-strong;             // base body text colour
+$background-colour: #fff;    // base body background colour
+
+$accent-colour: $red-mid;        // primary colour for links and other standout items
+$border-colour: #fff;            // site-wide border colour
+
+

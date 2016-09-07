@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>The Palate Deck</title>
+    <description>Better Beer Tasting Tools
+</description>
+    <link>http://palatedeck.com/</link>
+    <atom:link href="http://palatedeck.com/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Wed, 07 Sep 2016 11:29:25 -0700</pubDate>
+    <lastBuildDate>Wed, 07 Sep 2016 11:29:25 -0700</lastBuildDate>
+    <generator>Jekyll v3.1.2</generator>
+    
+      <item>
+        <title>Beer Glassware</title>
+        <description>&lt;img src=&quot;/images/photo-alibi2.jpg&quot; class=&quot;blog-photo&quot; alt=&quot;Different beer glassware&quot;&gt;
+
+&lt;p&gt;Beer glassware is one of those subjects that many will roll their eyes at, and with good reason. Six-packs comes in convenient serving-size portions with everything you need to drink the beer built in. Open the can or bottle, and there is no step 2.&lt;/p&gt;
+
+&lt;p&gt;But&amp;#8230; what you drink beer from &lt;em&gt;does&lt;/em&gt; matter. Beer-focused bars offer a variety of glasses to accentuate the appearance and aromatics of a beer. Doesn&#39;t it seem just a little bit nicer when your beer comes in a stemmed glass instead of your standard pint glass?&lt;/p&gt;
+
+&lt;p&gt;When your beer is in the right glass, it can help open up subtleties that you may not have noticed in any other glass. If you&#39;d like to learn more about how this works, well good news, there&#39;s now a guide for that in the &lt;a href=&quot;/tasting/&quot;&gt;Tasting Library&lt;/a&gt;.&lt;/p&gt;
+
+&lt;a class=&quot;button button-large&quot; href=&quot;/tasting/choosing-glassware/&quot;&gt;All About Glassware&lt;/a&gt;</description>
+        <pubDate>Sun, 28 Aug 2016 00:00:00 -0700</pubDate>
+        <link>http://palatedeck.com/2016/08/28/glassware.html</link>
+        <guid isPermaLink="true">http://palatedeck.com/2016/08/28/glassware.html</guid>
+        
+        
+      </item>
+    
+      <item>
+        <title>All About Beer Styles</title>
+        <description>&lt;img src=&quot;/images/photo-beer-flights.jpg&quot; class=&quot;blog-photo&quot; alt=&quot;Flights of different colours of beer&quot;&gt;
+
+&lt;p&gt;Pilsners, pale ales, stouts, saisons and lambics. There are hundreds of historical beer styles, not to mention the way modern breweries are evolving those and creating new ones all the time. Navigating beer styles can be tough without a guide.&lt;/p&gt;
+
+&lt;p&gt;If you&#39;ve ever been curious about the difference between a stout and a porter, or have never been quite sure what imperial means, there&#39;s help at hand. All these and more can be found in the &lt;a href=&quot;/tasting/beer-styles/&quot;&gt;Beer Styles&lt;/a&gt; reference, a new permanent addition to the &lt;a href=&quot;/tasting/&quot;&gt;Tasting Library&lt;/a&gt;.&lt;/p&gt;
+
+&lt;a class=&quot;button button-large&quot; href=&quot;/tasting/beer-styles/&quot;&gt;All About Beer Styles&lt;/a&gt;</description>
+        <pubDate>Thu, 25 Aug 2016 00:00:00 -0700</pubDate>
+        <link>http://palatedeck.com/2016/08/25/beerstyles.html</link>
+        <guid isPermaLink="true">http://palatedeck.com/2016/08/25/beerstyles.html</guid>
+        
+        
+      </item>
+    
+  </channel>
+</rss>
