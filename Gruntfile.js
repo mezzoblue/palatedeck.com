@@ -1,13 +1,6 @@
 module.exports = function(grunt) {
 
   grunt.initConfig({
-    cssmin: {
-      target: {
-        files: {
-          '_site/css/main.css': '_site/css/main.css'
-        }
-      }
-    },
     autoprefixer: {
       options: {
         browsers: ['last 2 versions']
@@ -15,12 +8,31 @@ module.exports = function(grunt) {
       single_file: {
         src: '_site/css/main.css'
       }
-
-    }
+    },
+    cssmin: {
+      target: {
+        files: {
+          '_site/css/main.css': '_site/css/main.css'
+        }
+      }
+    },
+    smarttext: {
+      options: {
+        // the defaults are great
+      },
+      target : {
+        files: [{
+          'expand': true,
+          'src': ['_site/**/*.html'],
+          'dest': '.'
+        }],
+      },
+    },    
   });
 
   grunt.loadNpmTasks('grunt-contrib-cssmin');
   grunt.loadNpmTasks('grunt-autoprefixer');
+  grunt.loadNpmTasks('grunt-smarttext');
 
-  grunt.registerTask('default', ['cssmin', 'autoprefixer']);
+  grunt.registerTask('default', ['autoprefixer', 'cssmin', 'smarttext']);
 };
