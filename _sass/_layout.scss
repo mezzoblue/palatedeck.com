@@ -354,6 +354,7 @@ $xxlarge: 1280px;
     max-width: 100%;
   }
 
+
   @include screen-xsmall {
     display: flex;
     flex-wrap: wrap;
@@ -362,21 +363,16 @@ $xxlarge: 1280px;
     }
   }
 
+}
+.photo-grid-small li {
   @include screen-medium {
-    li {
-      flex: 33% 0 1;
-    }
+    flex: 33% 0 1;
   }
 
   @include screen-large {
-    li {
-      flex: 25% 0 1;
-    }
+    flex: 25% 0 1;
   }
-
 }
-
-
 
 
 //
@@ -487,11 +483,6 @@ $xxlarge: 1280px;
     border-radius: 2px;
   }
 }
-.media-img-round {
-  img {
-    border-radius: 50%;
-  }
-}
 .media-img-small {
   img {
     max-width: 180px;
@@ -505,6 +496,13 @@ $xxlarge: 1280px;
 .media-img-large {
   img {
     max-width: 320px;
+  }
+}
+
+// light styling
+.media-img-round {
+  img {
+    border-radius: 50%;
   }
 }
 

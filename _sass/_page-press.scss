@@ -1,0 +1,35 @@
+/*
+
+    Press Page custom elements
+
+*/
+
+
+// some content finessing
+.page-press {
+
+  .header-small {
+    margin: 0 0 0.5rem 0;
+  }
+  p {
+    margin: 0 0 0.5rem 0;
+  }
+
+  .media-img-background {
+    img {
+      background: $blue-strong;
+      padding: 10px;
+    }
+  }
+
+  .mini-section {
+    margin: $spacing-unit 0;
+  }
+
+  .meta {
+    color: $brown-mid;
+    font-size: $small-font-size;
+    text-align: center;
+  }
+
+}
