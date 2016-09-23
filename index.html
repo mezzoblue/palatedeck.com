@@ -56,7 +56,7 @@ class: home
     <h2 class="header-secondary">From the Blog</h2>
 
     <ul class="post-listing">
-    {% for post in site.posts limit:4 %}
+    {% for post in site.posts limit:2 %}
       {% include blog-post-listing.html %}
     {% endfor %}
     </ul>
