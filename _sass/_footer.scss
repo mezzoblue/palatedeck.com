@@ -6,13 +6,12 @@
 
 .site-footer {
 
-    padding: 1rem;
+    padding: $spacing-unit 1rem;
 
     font-size: 0.5 * $base-font-size;
-    letter-spacing: 0.1em;
+    text-transform: uppercase;
 
     color: rgba($background-colour, 0.6);
-
     background-color: $brown-strong;
     background-image:
         linear-gradient(
@@ -20,66 +19,96 @@
             rgba($peach, 0.3) 0%,
             rgba($brown-strong, 0) 100%);
 
-    .wrapper {
-        text-align: center;
-        @include screen-medium {
-            text-align: left;
-            display: flex; 
-            flex-direction: row;
-        }
-    }
-
-    .footer-logo svg {
-        width: 24px;
-        height: 24px;
-        fill: $background-colour;
-    }
-
-    p {
-        margin: 0 0 1rem 0;
-        text-transform: uppercase;
-        @include screen-medium {
-            flex: 50% 1 1;
-            margin-bottom: 0;
-        }
-    }
-
 	a {
         color: #fff;
+        opacity: 0.5;
+        text-decoration: none;
+        transition: all 0.2s ease-out;
+        &:hover, &:focus {
+            opacity: 1;
+        }
 	}
 
     @include screen-medium {
-        padding: $spacing-unit 0;
+        padding: $spacing-unit 0 $spacing-unit / 2 0;
     }
 
 }
 
 
+.site-footer-nav {
 
+    margin: 0;
+    text-align: center;
 
-.site-footer-social {
-
-	margin: 0;
-
+    ul {
+        margin: 0;
+    }
     li {
-        display: inline-block;
-        margin: 0 0 0 1rem;
+        margin: 0;
         list-style: none;
     }
 
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    ul {
+        flex: 0 1 50%;
+    }
+
+    @include screen-small {
+        flex-wrap: nowrap;
+        text-align: left;
+        ul {
+            flex: 1 1 20%;
+        }
+        li {
+            margin: 0 0 0 0.25rem;
+        }
+    }
+
+}
+
+
+.site-footer-buy {
+
+    min-width: 30%;
+    padding-top: 2rem;
+    text-align: center;
+
+    .button-small {
+        display: inline-block;
+        padding: 0.25rem 2rem;
+        text-align: center;
+        &:hover, &:focus {
+            color: $brown-mid;
+        }
+    }
+
+    @include screen-small {
+        text-align: right;
+        ul {
+            flex: 0 1 20%;
+        }
+    }
+}
+
+@media (max-width: $small) {
+    .site-footer-nav .site-footer-buy {
+        flex: 0 1 100%;
+    }
+}
+
+.site-footer-social {
+
     a {
         display: inline-block;
-        opacity: 0.5;
-        width: 16px;
-        height: 16px;
-        padding-left: 16px;
-        overflow: hidden;
+        padding-left: 24px;
         background-size: 16px 16px;
         background-repeat: no-repeat;
-        transition: opacity 0.2s ease-out;
-        &:hover, &:focus {
-            opacity: 1;
-        }
+        background-position: 0 50%;
+        vertical-align: middle;
     }
 
     .twitter a {
@@ -91,13 +120,42 @@
     .instagram a {
         background-image: url(/images/ico-instagram.svg);
     }
-    .contact a {
-        background-image: url(/images/ico-contact.svg);
+
+}
+
+.site-footer-cap {
+
+    padding-top: $spacing-unit;
+    text-align: center;
+
+    .footer-logo svg {
+        width: 32px;
+        height: 32px;
+        fill: $background-colour;
     }
 
-    @include screen-medium {
-        flex: 50% 1 1;
-        text-align: right;
+    p {
+        margin: 0 0 1rem 0;
+        letter-spacing: 0.1em;
+        a {
+            opacity: 0.8;
+            &::before {
+                content: "|";
+                padding: 0 0.5rem;
+                opacity: 0.2;
+            }
+        }
+    }
+
+    @include screen-small {
+        text-align: left;
+        display: flex;
+        flex-direction: row-reverse;
+        p {
+            flex: 50% 1 1;
+            margin-bottom: 0;
+            text-align: right;
+        }
     }
 
 }
