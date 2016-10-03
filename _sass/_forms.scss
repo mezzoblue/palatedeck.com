@@ -5,7 +5,10 @@
 */
 
 
-input {
+//
+// general site-wide form element styling
+//
+input, textarea {
 	padding: 0.5rem;
 	border: solid 1px $brown-mid;
 
@@ -29,5 +32,34 @@ button {
 		border-color: $red-strong;
 		background-color: $red-strong;
 		cursor: pointer;
+	}
+}
+
+
+//
+// contained form styling
+//
+.form-row {
+	padding: 0 1rem 1rem 1rem;
+	text-align: center;
+
+	label, input, textarea {
+		width: 100%;
+		display: inline-block;
+	}
+	textarea {
+		min-height: $spacing-unit * 4;
+	}
+	@include screen-small {
+		display: flex;
+		label {
+			flex: 33% 1 1;
+		}
+		input, textarea {
+			flex: 100% 1 1;
+		}
+	}
+	@include screen-medium {
+		padding: 0 $spacing-unit $spacing-unit / 2 $spacing-unit;
 	}
 }

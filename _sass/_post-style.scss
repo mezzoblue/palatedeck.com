@@ -173,6 +173,37 @@
 	}
 }
 
+.quote {
+  margin: $spacing-unit 0;
+  padding: $spacing-unit 0 0 0;
+  border-top: dotted 1px $peach;
+
+  &:last-child {
+    padding-bottom: $spacing-unit * 2;
+    margin-bottom: 0;
+  }
+
+  blockquote {
+    position: relative;
+    padding-left: $spacing-unit * 1.5;
+    &::before {
+      content: "\201C";
+      position: absolute;
+      top: 1rem;
+      left: 0;
+      font-size: 5rem;
+      font-weight: bold;
+      color: rgba($brown-mid, 0.2);
+    }
+  }
+
+  footer {
+    font-family: $alt-font-family;
+    font-size: $small-font-size;
+    font-style: italic;
+  }
+}
+
 
 .post-listing {
 
@@ -215,6 +246,25 @@
   }
 
 }
+
+
+
+//
+// Contact form styling
+//
+.contact-sent{
+  display: flex;
+  flex-direction: column;
+  min-height: 60vh;
+  justify-content: center;
+  align-items: center;
+
+  img {
+    max-width: 200px;
+  }
+  padding: 0 $spacing-unit;
+}
+
 
 
 //
