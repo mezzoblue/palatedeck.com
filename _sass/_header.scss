@@ -86,7 +86,8 @@
     display: block;
     flex: 50% 0 0;
 
-    padding: 0;
+    // stupid magic numbers for logo alignment
+    padding: 7px 0 0 0;
     margin: 0;
     list-style: none;
     line-height: 1;
@@ -113,8 +114,6 @@
 
     @include screen-medium {
       a {
-        // stupid magic numbers for logo alignment
-        padding: 7px 0 0 0;
         color: $red-mid;
         &:hover, &:active {
           color: $red-strong;
@@ -154,7 +153,28 @@
 
 // weaponize the commerce
 .site-nav li.site-nav-buy a {
-  // deal with this later
+
+  padding: 0 1rem;
+  border-radius: 2px;
+  text-transform: uppercase;
+  text-decoration: none;
+  transition: all ease-out 0.2s;
+
+  &:hover, &:active {
+    color: $background-colour;
+    text-decoration: none;
+  }
+
+  @include screen-medium {
+    color: $background-colour;
+    background: $red-mid;
+    border: solid 1px rgba($background-colour, 0);
+    &:hover, &:active {
+      color: $background-colour;
+      background: $red-strong;
+    }
+  }
+
 }
 
 
@@ -273,9 +293,6 @@
 
   .site-nav li.site-nav-buy a {
     background: transparent;
-    &:hover, &:focus {
-      text-decoration: underline;
-    }
     
     @include screen-medium {
       padding: 0 1rem;

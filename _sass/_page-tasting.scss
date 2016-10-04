@@ -14,12 +14,13 @@
     background-color: rgba($orange-mid, 0.8);
   }
 
-  .site-nav .site-nav-buy a {
-    &:hover, &:focus {
-      color: $orange-strong;
+  @include screen-medium {
+    .site-nav .site-nav-buy a {
+      &:hover, &:focus {
+        color: $orange-strong;
+      }
     }
   }
-
 
   .panel-sub {
 

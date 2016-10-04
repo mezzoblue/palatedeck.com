@@ -14,9 +14,11 @@
     background-color: rgba($blue-strong, 0.6);
   }
 
-  .site-nav .site-nav-buy a {
-    &:hover, &:focus {
-      color: $blue-strong;
+  @include screen-medium {
+    .site-nav .site-nav-buy a {
+      &:hover, &:focus {
+        color: $blue-strong;
+      }
     }
   }
 
