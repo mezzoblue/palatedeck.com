@@ -382,44 +382,42 @@ $xxlarge: 1280px;
 
 .product-list {
 
-  > li {
-    padding: 0 0 $spacing-unit * 1.5 0;
-    margin: 0 0 $spacing-unit * 1.5 0;
-    border-bottom: dotted 1px $peach;
-    list-style: none;
-    text-align: center;
+  padding: 0 0 $spacing-unit * 1.5 0;
+  margin: 0 0 $spacing-unit * 1.5 0;
+  border-bottom: dotted 1px $peach;
+  list-style: none;
+  text-align: center;
 
-    &:last-child {
-      border: none;
-    }
+  &:last-child {
+    border: none;
+  }
 
+  @include screen-medium {
+    display: flex;
+    // align-items: center;
+    flex-wrap: wrap;
+    text-align: left;
+  }
+
+  h3 {
     @include screen-medium {
-      display: flex;
-      align-items: center;
-      flex-wrap: wrap;
-      text-align: left;
+      flex: 80% 1 1;      
+      order: 1;
+      margin: 0 0 $spacing-unit 0;
     }
+  }
 
-    h3 {
-      @include screen-medium {
-        flex: 80% 1 1;      
-        order: 1;
-        margin: 0 0 $spacing-unit 0;
-      }
+  h4 {
+    font-size: $small-font-size;
+    display: inline;
+    letter-spacing: 0;
+    &::after {
+      content: ": ";
     }
-
-    h4 {
-      font-size: $small-font-size;
-      display: inline;
-      letter-spacing: 0;
-      &::after {
-        content: ": ";
-      }
-    }
-    ul {
-      margin: 0;
-      display: inline;
-    }
+  }
+  .inline {
+    margin: 0;
+    display: inline;
     li {
       @include type-base-small;
       display: inline;
@@ -466,6 +464,36 @@ $xxlarge: 1280px;
   }
   .button {
     display: inline-block;
+  }
+}
+
+
+
+//
+//  CARD INDEX
+//  compact layout for large card listings
+//
+.card-index {
+  padding-top: $spacing-unit / 2;
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  li {
+    padding: 0 0.5rem;
+    margin: 0 0 0.5rem;
+    flex: 50% 1 1;
+
+    font-size: $small-font-size;
+    line-height: 1.2;
+    list-style: none;
+    text-align: center;
+  }
+
+  @include screen-medium {
+    li {
+      flex: 25% 1 1;
+    }
   }
 }
 

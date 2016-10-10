@@ -83,3 +83,47 @@
     margin-bottom: $spacing-unit;    
   }
 }
+
+
+// expanding content trigger
+.trigger {
+  text-align: center;
+
+  a {
+    display: inline-block;
+    padding: 0.5rem 1.5rem;
+
+    color: $blue-mid;
+    background: transparent;
+    border-color: $blue-mid;
+
+    font-size: 1rem;
+
+    &::after {
+      display: inline-block;
+      content: " ";
+
+      position: relative;
+      top: 2px;
+
+      width: 24px;
+      height: 15px;
+      margin: 0 0 0 0.75rem;
+     
+      background-image: url(/images/ui-down-caret.png);
+      background-repeat: no-repeat;
+      background-size: 24px auto;
+    }
+
+    &:hover, &:active {
+        color: $blue-strong;
+        background: none;
+        border-color: $blue-strong;
+
+        &::after {
+          background-position: 0 -21px;
+        }
+
+    }
+  }
+}
