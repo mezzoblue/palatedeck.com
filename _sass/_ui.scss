@@ -3,6 +3,14 @@
 */
 
 
+// form components
+
+button, input, textarea {
+    @include type-base-small;
+}
+
+
+
 //
 // Button classes
 //
