@@ -69,9 +69,18 @@
 .page-section-home-video {
     padding: $spacing-unit 0;
     text-align: center;
-    img {
-      border: solid 1px rgba(#9a9a9a, 0.7);
-      border-radius: 6px;
+    video {
+      max-width: 100%;
+      margin-bottom: $spacing-unit / 2;
+    }
+
+    .button {
+      color: $red-strong;
+      border-color: $red-strong;
+      &:hover, &:focus {
+        color: $background-colour;
+        background-color: $red-strong;
+      }
     }
 
     @include screen-medium {
