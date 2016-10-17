@@ -9,7 +9,16 @@
 //
 //  THUMBNAIL IMAGES
 //  control classes to place blog post thumbnail images
+//  (this sucks, but background-image kinda sucks, so oh well)
 //
+.blog-photo-pd-hops {background-image:
+    linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.5) 100%),
+    url(/images/photo-pd-hops-sm.jpg);
+}
+.blog-photo-pd-launch {background-image:
+    linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.5) 100%),
+    url(/images/photo-pd-launch-sm.jpg);
+}
 .blog-photo-pd-intro {background-image:
     linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.5) 100%),
     url(/images/photo-pd-intro-sm.jpg);
@@ -82,9 +91,12 @@
   padding: 0;
   background: rgba($brown-mid, 0.1);
 
+  .button-wrapper {
+    margin: $spacing-unit 0;
+    text-align: center;
+  }
   .button {
     display: inline-block;
-    margin: $spacing-unit auto;
   }
 
 }

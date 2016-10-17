@@ -6,8 +6,8 @@
 </description>
     <link>http://palatedeck.com/</link>
     <atom:link href="http://palatedeck.com/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 15 Oct 2016 18:21:17 -0700</pubDate>
-    <lastBuildDate>Sat, 15 Oct 2016 18:21:17 -0700</lastBuildDate>
+    <pubDate>Mon, 17 Oct 2016 16:10:57 -0700</pubDate>
+    <lastBuildDate>Mon, 17 Oct 2016 16:10:57 -0700</lastBuildDate>
     <generator>Jekyll v3.1.2</generator>
     
       <item>
@@ -87,7 +87,10 @@
 
 &lt;p&gt;When your beer is in the right glass, it can help open up subtleties that you may not have noticed in any other glass. If you&#39;d like to learn more about how this works, well good news, there&#39;s now a guide for that in the &lt;a href=&quot;/tasting/&quot;&gt;Tasting Library&lt;/a&gt;.&lt;/p&gt;
 
-&lt;a class=&quot;button button-large&quot; href=&quot;/tasting/choosing-glassware/&quot;&gt;All About Glassware&lt;/a&gt;</description>
+
+&lt;div class=&quot;button-wrapper&quot;&gt;
+	&lt;a class=&quot;button button-large&quot; href=&quot;/tasting/choosing-glassware/&quot;&gt;All About Glassware&lt;/a&gt;
+&lt;/div&gt;</description>
         <pubDate>Sun, 28 Aug 2016 00:00:00 -0700</pubDate>
         <link>http://palatedeck.com/2016/08/28/glassware.html</link>
         <guid isPermaLink="true">http://palatedeck.com/2016/08/28/glassware.html</guid>
@@ -103,7 +106,10 @@
 
 &lt;p&gt;If you&#39;ve ever been curious about the difference between a stout and a porter, or have never been quite sure what imperial means, there&#39;s help at hand. All these and more can be found in the &lt;a href=&quot;/tasting/beer-styles/&quot;&gt;Beer Styles&lt;/a&gt; reference, a new permanent addition to the &lt;a href=&quot;/tasting/&quot;&gt;Tasting Library&lt;/a&gt;.&lt;/p&gt;
 
-&lt;a class=&quot;button button-large&quot; href=&quot;/tasting/beer-styles/&quot;&gt;All About Beer Styles&lt;/a&gt;</description>
+
+&lt;div class=&quot;button-wrapper&quot;&gt;
+	&lt;a class=&quot;button button-large&quot; href=&quot;/tasting/beer-styles/&quot;&gt;All About Beer Styles&lt;/a&gt;
+&lt;/div&gt;</description>
         <pubDate>Thu, 25 Aug 2016 00:00:00 -0700</pubDate>
         <link>http://palatedeck.com/2016/08/25/beerstyles.html</link>
         <guid isPermaLink="true">http://palatedeck.com/2016/08/25/beerstyles.html</guid>
