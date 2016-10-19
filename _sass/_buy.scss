@@ -37,6 +37,10 @@
     font-size: $small-font-size;
   }
 
+  a {
+    color: $background-colour;
+  }
+
   label {
     display: none;
   }
