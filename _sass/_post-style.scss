@@ -102,7 +102,13 @@
 }
 
 .post-content {
-  padding: $spacing-unit 0 0;
+  padding: $spacing-unit 0;
+
+  .buy-panel {
+    margin: 0;
+    background: $background-colour;
+  }
+
 }
 
 .post-back-link {
@@ -132,7 +138,7 @@
 
 @include screen-medium {
   .post-content {
-    padding: $spacing-unit 0 0 0;
+    padding: $spacing-unit 0 $spacing-unit * 2 0;
   }
 }
 
