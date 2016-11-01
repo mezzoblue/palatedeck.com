@@ -11,6 +11,10 @@
 //  control classes to place blog post thumbnail images
 //  (this sucks, but background-image kinda sucks, so oh well)
 //
+.blog-photo-pd-findumonde {background-image:
+    linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.5) 100%),
+    url(/images/blog/usage-1.jpg);
+}
 .blog-photo-pd-hops {background-image:
     linear-gradient(to bottom, rgba(black, 0.5) 0%, rgba(black, 0.5) 100%),
     url(/images/photo-pd-hops-sm.jpg);
